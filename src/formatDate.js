@@ -32,7 +32,7 @@ function formatDate(date, fromFormat, toFormat) {
     return value;
   };
 
-  for (let i = 0; i < fromFormat.length; i++) {
+  for (let i = 0; i < fromFormat.length - 1; i++) {
     if (fromFormat[i].includes('D')) {
       day = arrayDate[i];
     }
@@ -47,7 +47,7 @@ function formatDate(date, fromFormat, toFormat) {
     }
   }
 
-  for (let i = 0; i < toFormat.length; i++) {
+  for (let i = 0; i < toFormat.length - 1; i++) {
     if (toFormat[i].includes('D')) {
       res[i] = day;
     }
